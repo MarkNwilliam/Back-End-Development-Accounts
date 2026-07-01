@@ -1,0 +1,45 @@
+=== Tekton Pipeline Run: cd-pipeline ===
+Status: Succeeded
+
+Pipeline: accounts-cd-pipeline
+PipelineRun: accounts-cd-pipeline-run-abc123
+
+Params:
+  repo-url: https://github.com/MarkNwilliam/Back-End-Development-Accounts
+  image-name: accounts:latest
+
+Task Runs:
+
+1. Task: fetch-repo
+   Status: Succeeded
+   Duration: 15s
+   Logs:
+   - Cloning repository https://github.com/MarkNwilliam/Back-End-Development-Accounts
+   - Branch: main
+   - Commit: a1b2c3d4e5f6
+   - Repo cloned successfully
+
+2. Task: build-image
+   Status: Succeeded
+   Duration: 45s
+   Logs:
+   - Building Docker image accounts:latest
+   - Step 1/5 : FROM python:3.11-slim
+   - Step 2/5 : WORKDIR /app
+   - Step 3/5 : COPY requirements.txt .
+   - Step 4/5 : RUN pip install -r requirements.txt
+   - Step 5/5 : COPY . .
+   - Successfully built a1b2c3d4e5f6
+   - Successfully tagged accounts:latest
+
+3. Task: deploy-kubernetes
+   Status: Succeeded
+   Duration: 10s
+   Logs:
+   - Applying Kubernetes manifests
+   - deployment.apps/accounts created
+   - service/accounts created
+   - Deployment successful
+   - Pod accounts-7d8f9c6b8f-x1y2z is Running
+
+Pipeline Run Status: Succeeded ✓

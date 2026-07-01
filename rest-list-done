@@ -1,0 +1,11 @@
+\$ curl http://localhost:8000/accounts
+[
+  {
+    "address": null,
+    "date_joined": null,
+    "email": "john@example.com",
+    "id": 1,
+    "name": "John Doe",
+    "phone_number": null
+  }
+]

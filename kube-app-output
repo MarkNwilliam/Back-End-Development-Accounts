@@ -1,0 +1,15 @@
+$ curl http://localhost:8080/
+{
+  "name": "Accounts REST API Service",
+  "version": "1.0"
+}
+
+$ curl http://localhost:8080/health
+{
+  "status": "OK"
+}
+
+$ curl http://localhost:8080/accounts
+[]
+
+Application successfully launched on port 8080.

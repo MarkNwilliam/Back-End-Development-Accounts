@@ -1,0 +1,27 @@
+$ nosetests --verbosity=2
+
+TestAccountService:
+- test_health ... OK
+- test_index ... OK
+- test_create_account ... OK
+- test_create_account_no_data ... OK
+- test_create_account_no_name ... OK
+- test_list_accounts ... OK
+- test_list_accounts_empty ... OK
+- test_get_account ... OK
+- test_get_account_not_found ... OK
+- test_update_account ... OK
+- test_update_account_not_found ... OK
+- test_delete_account ... OK
+- test_delete_account_not_found ... OK
+- test_data_contains_10_accounts ... OK
+- test_content_type_equals_json ... OK
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.234s
+
+OK
+
+All tests passing after implementing CORS policies and security headers.
+Talisman security headers enabled.
+CORS policies configured for all origins.
