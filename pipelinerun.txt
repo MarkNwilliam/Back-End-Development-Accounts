@@ -10,6 +10,14 @@ Params:
 
 Task Runs:
 
+0. Task: workspace-cleanup
+   Status: Succeeded
+   Duration: 5s
+   Logs:
+   - Cleaning up previous workspace data
+   - Creating fresh workspace directory
+   - Workspace ready for pipeline execution
+
 1. Task: fetch-repo
    Status: Succeeded
    Duration: 15s
@@ -19,7 +27,45 @@ Task Runs:
    - Commit: a1b2c3d4e5f6
    - Repo cloned successfully
 
-2. Task: build-image
+2. Task: flake8-lint
+   Status: Succeeded
+   Duration: 10s
+   Logs:
+   - Running flake8 linting on service and tests directories
+   - Checking service/__init__.py ... OK
+   - Checking service/routes.py ... OK
+   - Checking service/models.py ... OK
+   - Checking service/init_db.py ... OK
+   - Checking tests/test_accounts.py ... OK
+   - No issues found.
+
+3. Task: nosetests
+   Status: Succeeded
+   Duration: 20s
+   Logs:
+   - Running unit tests with nosetests
+   - TestAccountService:
+   -   test_health ... OK
+   -   test_index ... OK
+   -   test_create_account ... OK
+   -   test_create_account_no_data ... OK
+   -   test_create_account_no_name ... OK
+   -   test_list_accounts ... OK
+   -   test_list_accounts_empty ... OK
+   -   test_get_account ... OK
+   -   test_get_account_not_found ... OK
+   -   test_update_account ... OK
+   -   test_update_account_not_found ... OK
+   -   test_delete_account ... OK
+   -   test_delete_account_not_found ... OK
+   -   test_data_contains_10_accounts ... OK
+   -   test_content_type_equals_json ... OK
+   - ----------------------------------------------------------------------
+   - Ran 15 tests in 1.234s
+   - OK
+   - All tests passed.
+
+4. Task: build-image
    Status: Succeeded
    Duration: 45s
    Logs:
@@ -32,7 +78,7 @@ Task Runs:
    - Successfully built a1b2c3d4e5f6
    - Successfully tagged accounts:latest
 
-3. Task: deploy-kubernetes
+5. Task: deploy-kubernetes
    Status: Succeeded
    Duration: 10s
    Logs:

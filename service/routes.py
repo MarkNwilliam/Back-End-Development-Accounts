@@ -4,7 +4,7 @@ from service.models import Account, DataValidationError, db
 
 @app.route('/')
 def index():
-    return jsonify({"name": "Accounts REST API Service", "version": "1.0"})
+    return jsonify({"name": "Account REST API Service", "version": "1.0"})
 
 @app.route('/health')
 def health():
