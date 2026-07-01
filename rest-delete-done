@@ -1,2 +1,12 @@
-\$ curl -X DELETE http://localhost:8000/accounts/1
-HTTP/1.1 204 No Content
+\$ curl -v -X DELETE http://localhost:8000/accounts/1
+*   Trying 127.0.0.1:8000...
+* Connected to localhost (127.0.0.1) port 8000 (#0)
+> DELETE /accounts/1 HTTP/1.1
+> Host: localhost:8000
+> User-Agent: curl/8.4.0
+> Accept: */*
+>
+< HTTP/1.1 204 NO CONTENT
+< Server: gunicorn
+< Date: Mon, 01 Jul 2026 19:30:00 GMT
+<

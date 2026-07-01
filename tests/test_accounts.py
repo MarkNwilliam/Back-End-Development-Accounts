@@ -109,3 +109,15 @@ class TestAccountService(unittest.TestCase):
         resp = self.app.get('/accounts')
         self.assertEqual(resp.status_code, 200)
         self.assertEqual(resp.content_type, 'application/json')
+
+    def test_it_should_return_a_cors_header(self):
+        resp = self.app.get('/accounts')
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn('Access-Control-Allow-Origin', resp.headers)
+        self.assertEqual(resp.headers.get('Access-Control-Allow-Origin'), '*')
+
+    def test_it_should_return_security_headers(self):
+        resp = self.app.get('/accounts')
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn('X-Content-Type-Options', resp.headers)
+        self.assertEqual(resp.headers.get('X-Content-Type-Options'), 'nosniff')

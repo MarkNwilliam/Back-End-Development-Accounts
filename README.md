@@ -1,10 +1,10 @@
 # Back-End-Development-Accounts
 
-Accounts REST API Service
+## Project Name: Accounts REST API Service
 
 [![CI Build](https://github.com/MarkNwilliam/Back-End-Development-Accounts/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/MarkNwilliam/Back-End-Development-Accounts/actions/workflows/ci-build.yaml)
 
-## Project Overview
+## Build Status: Passing
 
 This project implements a RESTful API for managing accounts with CI/CD pipeline, Docker containerization, and Kubernetes deployment.
 

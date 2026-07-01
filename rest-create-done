@@ -1,4 +1,20 @@
-\$ curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"John Doe\",\"email\":\"john@example.com\"}" http://localhost:8000/accounts
+\$ curl -v -X POST -H "Content-Type: application/json" -d "{\"name\":\"John Doe\",\"email\":\"john@example.com\"}" http://localhost:8000/accounts
+*   Trying 127.0.0.1:8000...
+* Connected to localhost (127.0.0.1) port 8000 (#0)
+> POST /accounts HTTP/1.1
+> Host: localhost:8000
+> User-Agent: curl/8.4.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 47
+>
+* upload completely sent off: 47 bytes
+< HTTP/1.1 201 CREATED
+< Content-Type: application/json
+< Content-Length: 107
+< Server: gunicorn
+< Date: Mon, 01 Jul 2026 19:30:00 GMT
+<
 {
   "address": null,
   "date_joined": null,

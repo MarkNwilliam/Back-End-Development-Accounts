@@ -1,4 +1,17 @@
-\$ curl http://localhost:8000/accounts
+\$ curl -v http://localhost:8000/accounts
+*   Trying 127.0.0.1:8000...
+* Connected to localhost (127.0.0.1) port 8000 (#0)
+> GET /accounts HTTP/1.1
+> Host: localhost:8000
+> User-Agent: curl/8.4.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Content-Type: application/json
+< Content-Length: 108
+< Server: gunicorn
+< Date: Mon, 01 Jul 2026 19:30:00 GMT
+<
 [
   {
     "address": null,

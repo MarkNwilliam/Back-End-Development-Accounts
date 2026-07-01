@@ -16,9 +16,11 @@ TestAccountService:
 - test_delete_account_not_found ... OK
 - test_data_contains_10_accounts ... OK
 - test_content_type_equals_json ... OK
+- It should return a CORS header ... OK
+- It should return security headers ... OK
 
 ----------------------------------------------------------------------
-Ran 15 tests in 1.234s
+Ran 17 tests in 1.456s
 
 OK
 

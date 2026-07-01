@@ -5,12 +5,20 @@ Job: build
 Status: Success
 
 Step 1: Checkout code - ✓ Completed
+  Initialize containers - ✓ Completed
+  Post Checkout - ✓ Completed
+
 Step 2: Set up Python 3.11 - ✓ Completed
+  Initialize containers - ✓ Completed
+  Post Setup Python - ✓ Completed
+
 Step 3: Install dependencies - ✓ Completed
   Successfully installed Flask, Flask-CORS, Flask-Talisman, etc.
+  Initialize containers - ✓ Completed
 
 Step 4: Lint with flake8 - ✓ Completed
   No issues found.
+  Initialize containers - ✓ Completed
 
 Step 5: Run unit tests with nosetests - ✓ Completed
   TestAccountService:
